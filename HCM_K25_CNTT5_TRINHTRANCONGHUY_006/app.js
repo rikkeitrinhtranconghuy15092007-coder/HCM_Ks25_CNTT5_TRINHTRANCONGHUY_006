@@ -150,7 +150,6 @@ const handleAddAthlete = () => {
     displayAthletes([newAthlete]);
 };
 
-// Đã sửa lỗi thiếu chữ 'c'
 const handleUpdateAthlete = () => {
     let rawCode = prompt("Nhập mã vận động viên cần cập nhật:");
     if (rawCode === null) return;
@@ -242,27 +241,27 @@ const displaySummaryReport = () => {
     });
 
     let avgAge = (totalAge / athletes.length).toFixed(1);
-    console.log("==================================================");
+    console.log("=================================");
     console.log("BÁO CÁO TỔNG KẾT VẬN ĐỘNG VIÊN");
-    console.log("==================================================");
+    console.log("=================================");
     console.log(`Tổng số vận động viên: ${athletes.length}`);
     console.log(`Tuổi trung bình: ${avgAge}`);
     console.log(`Vận động viên lớn tuổi nhất: ${oldestAthlete.athleteCode} ${oldestAthlete.fullName} ${oldestAthlete.age}`);
-    console.log("==================================================");
+    console.log("=================================");
 }
 
 const startProgram = () =>{
     const menuString = `
-    ====================================================
-    HỆ THỐNG QUẢN LÝ VẬN ĐỘNG VIÊN CLB THỂ THAO VICTORY 
-    ====================================================
+    ==========================================
+    HỆ THỐNG QUẢN LÝ CLB THỂ THAO VICTORY 
+    ==========================================
     1.Hiển thị danh sách vận động viên
     2.Thêm vận động viên mới 
     3.Cập nhật thông tin vận động viên
     4.Xóa vận động viên 
     5.Tìm kiếm vận động viên theo môn thi đấu
     0.Thoát chương trình 
-    =====================================================
+    =========================================
     Vui lòng nhập lựa chọn của bạn(0-5):`;
     while (true) {
         let choice = prompt(menuString);
